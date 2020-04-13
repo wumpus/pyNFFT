@@ -265,12 +265,12 @@ def setup_package():
     # Refresh version file
     write_version_py()
     
+    build_requires = ['Cython']
     # Figure out whether to add ``*_requires = ['numpy']``.
-    build_requires = []
     try:
         import numpy
     except:
-        build_requires = ['numpy>=1.6',]
+        build_requires.append('numpy>=1.6')
         
     # Common setup args
     setup_args = dict(
