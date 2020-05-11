@@ -31,7 +31,7 @@ package_dir = os.path.join(setup_dir, package_name)
 def get_common_extension_args():
     import numpy
     common_extension_args = dict(
-        libraries=['nfft3_threads', 'nfft3', 'fftw3_threads', 'fftw3', 'm'],
+        libraries=['nfft3', 'fftw3', 'm'],
         library_dirs=[],
         include_dirs=[numpy.get_include()],
         extra_compile_args='-O3 -fomit-frame-pointer -malign-double '

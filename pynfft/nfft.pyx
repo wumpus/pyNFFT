@@ -31,12 +31,12 @@ cdef extern from *:
 np.import_array()
 
 # initialize FFTW threads
-fftw_init_threads()
+#fftw_init_threads()
 
 # register cleanup callbacks
 cdef void _cleanup():
     fftw_cleanup()
-    fftw_cleanup_threads()
+#    fftw_cleanup_threads()
 
 Py_AtExit(_cleanup)
 
